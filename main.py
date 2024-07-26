@@ -31,7 +31,7 @@ async def get_api_key(api_key_header: str = Security(api_key_header)):
 
 app.include_router(router, dependencies=[Depends(get_api_key)])
 
-
+# This is a comment
 @app.on_event("startup")
 async def startup_event():
     # Start the RabbitMQ consumer in a separate thread
